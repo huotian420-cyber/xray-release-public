@@ -16,15 +16,15 @@
 - `SHA256SUMS.txt`
 
 对应私有源码提交：
-- `7c5cecb` `Refresh headless release package`
+- `ad6a35a` `Add VLESS Encryption support to headless nodes`
 
 当前根目录同步的公开包：
-- `v2026.03.21-headless-direct-1`
+- `v2026.03.26-headless-direct-1`
 
 推荐下载命令：
 
 ```bash
-curl -fL --progress-bar -o xray-backend-release.tar.gz https://github.com/huotian420-cyber/xray-release-public/releases/download/v2026.03.21-headless-direct-1/xray-backend-release.tar.gz
+curl -fL --progress-bar -o xray-backend-release.tar.gz https://github.com/huotian420-cyber/xray-release-public/releases/download/v2026.03.26-headless-direct-1/xray-backend-release.tar.gz
 ```
 
 仓库根目录直链：
