@@ -20,6 +20,7 @@
 
 当前根目录同步的公开包：
 - 基于稳定线 `main` 的最新无前端安装包
+- 当前固定版本 tag：`v2026.03.28-headless-direct-4`
 - 安装脚本已对齐官方正式版 `Xray-core v26.3.27`
 - 已包含 `Reality x25519` 新输出兼容、`XHTTP mode` 选择和 `Reality shortIds` 归一化
 
@@ -27,6 +28,12 @@
 
 ```bash
 curl -fL --progress-bar -o xray-backend-release.tar.gz https://raw.githubusercontent.com/huotian420-cyber/xray-release-public/main/xray-backend-release.tar.gz
+```
+
+固定版本下载：
+
+```bash
+curl -fL --progress-bar -o xray-backend-release.tar.gz https://raw.githubusercontent.com/huotian420-cyber/xray-release-public/v2026.03.28-headless-direct-4/xray-backend-release.tar.gz
 ```
 
 校验命令：
