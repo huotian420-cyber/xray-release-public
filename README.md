@@ -16,21 +16,24 @@
 - `SHA256SUMS.txt`
 
 对应私有源码提交：
-- `ad6a35a` `Add VLESS Encryption support to headless nodes`
+- `f1229d7` `Refresh headless stable release package`
 
 当前根目录同步的公开包：
-- `v2026.03.26-headless-direct-3`
+- 基于稳定线 `main` 的最新无前端安装包
+- 安装脚本已对齐官方正式版 `Xray-core v26.3.27`
+- 已包含 `Reality x25519` 新输出兼容、`XHTTP mode` 选择和 `Reality shortIds` 归一化
 
 推荐下载命令：
 
 ```bash
-curl -fL --progress-bar -o xray-backend-release.tar.gz https://github.com/huotian420-cyber/xray-release-public/releases/download/v2026.03.26-headless-direct-3/xray-backend-release.tar.gz
+curl -fL --progress-bar -o xray-backend-release.tar.gz https://raw.githubusercontent.com/huotian420-cyber/xray-release-public/main/xray-backend-release.tar.gz
 ```
 
-仓库根目录直链：
+校验命令：
 
 ```bash
-curl -fL --progress-bar -o xray-backend-release.tar.gz https://raw.githubusercontent.com/huotian420-cyber/xray-release-public/main/xray-backend-release.tar.gz
+curl -fL --progress-bar -o SHA256SUMS.txt https://raw.githubusercontent.com/huotian420-cyber/xray-release-public/main/SHA256SUMS.txt
+sha256sum -c SHA256SUMS.txt
 ```
 
 和另外 3 个仓的关系：
@@ -42,6 +45,6 @@ curl -fL --progress-bar -o xray-backend-release.tar.gz https://raw.githubusercon
   - [huotian420-cyber/xray-frontend-release-public](https://github.com/huotian420-cyber/xray-frontend-release-public)
 
 说明：
-- Release 页面保留历史无前端版本
+- Release 页面可保留历史无前端版本
 - 仓库根目录只保留当前最新的无前端包
 - 如果你要带前端安装包，不要下这个仓，去 `xray-frontend-release-public`
