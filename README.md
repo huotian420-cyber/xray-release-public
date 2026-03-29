@@ -18,7 +18,7 @@
 - 包名：`xray-backend-release.tar.gz`
 - 校验：`SHA256SUMS.txt`
 - 对应源码仓：[`huotian420-cyber/xray-headless-source`](https://github.com/huotian420-cyber/xray-headless-source)
-- 当前对应源码提交：`ce0a222` `Remove SSH knock from headless release and align ALPN`
+- 当前对应源码提交：`569201e` `Remove SSH knock from headless release and align ALPN`
 - 当前固定版本：`v2026.03.30-headless-direct-1`
 
 ## Tag 规则
