@@ -18,15 +18,15 @@
 - 包名：`xray-backend-release.tar.gz`
 - 校验：`SHA256SUMS.txt`
 - 对应源码仓：[`huotian420-cyber/xray-headless-source`](https://github.com/huotian420-cyber/xray-headless-source)
-- 当前对应源码提交：`f1229d7` `Refresh headless stable release package`
-- 当前固定版本：`v2026.03.28-headless-direct-4`
+- 当前对应源码提交：`ce0a222` `Remove SSH knock from headless release and align ALPN`
+- 当前固定版本：`v2026.03.30-headless-direct-1`
 
 ## Tag 规则
 
 - 无前端公开包统一使用：
   - `vYYYY.MM.DD-headless-direct-N`
 - 例子：
-  - `v2026.03.28-headless-direct-4`
+  - `v2026.03.30-headless-direct-1`
 - 含义：
   - `YYYY.MM.DD`：发布日期
   - `headless`：无前端安装包
@@ -39,8 +39,22 @@
 - 默认不带网页面板
 - `TLS / Reality` 由 `Xray` 直接监听
 - 安装脚本已对齐官方正式版 `Xray-core v26.3.27`
+- 已移除 SSH 敲门，SSH `22` 保持开放
+- 已按当前官方行为补齐 `XHTTP / gRPC / ALPN(h3/h2/http/1.1)` 兼容
 
 ## 下载
+
+Ubuntu 一键安装最新版本：
+
+```bash
+sudo bash -c 'set -e; apt-get update -y; apt-get install -y curl tar; workdir=$(mktemp -d); cd "$workdir"; curl -fL --progress-bar -o xray-backend-release.tar.gz https://raw.githubusercontent.com/huotian420-cyber/xray-release-public/main/xray-backend-release.tar.gz; tar -xzf xray-backend-release.tar.gz; chmod +x install.sh; ./install.sh'
+```
+
+Ubuntu 一键安装固定版本：
+
+```bash
+sudo bash -c 'set -e; apt-get update -y; apt-get install -y curl tar; workdir=$(mktemp -d); cd "$workdir"; curl -fL --progress-bar -o xray-backend-release.tar.gz https://raw.githubusercontent.com/huotian420-cyber/xray-release-public/v2026.03.30-headless-direct-1/xray-backend-release.tar.gz; tar -xzf xray-backend-release.tar.gz; chmod +x install.sh; ./install.sh'
+```
 
 最新版本：
 
@@ -51,7 +65,7 @@ curl -fL --progress-bar -o xray-backend-release.tar.gz https://raw.githubusercon
 固定版本：
 
 ```bash
-curl -fL --progress-bar -o xray-backend-release.tar.gz https://raw.githubusercontent.com/huotian420-cyber/xray-release-public/v2026.03.28-headless-direct-4/xray-backend-release.tar.gz
+curl -fL --progress-bar -o xray-backend-release.tar.gz https://raw.githubusercontent.com/huotian420-cyber/xray-release-public/v2026.03.30-headless-direct-1/xray-backend-release.tar.gz
 ```
 
 校验：
