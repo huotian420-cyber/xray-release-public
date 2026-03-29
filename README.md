@@ -21,6 +21,18 @@
 - 当前对应源码提交：`f1229d7` `Refresh headless stable release package`
 - 当前固定版本：`v2026.03.28-headless-direct-4`
 
+## Tag 规则
+
+- 无前端公开包统一使用：
+  - `vYYYY.MM.DD-headless-direct-N`
+- 例子：
+  - `v2026.03.28-headless-direct-4`
+- 含义：
+  - `YYYY.MM.DD`：发布日期
+  - `headless`：无前端安装包
+  - `direct`：当前这条公开直发稳定线
+  - `N`：当天递增版本号
+
 ## 当前版本说明
 
 - 这是稳定线的无前端包
