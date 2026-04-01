@@ -18,7 +18,7 @@
 - 包名：`xray-backend-release.tar.gz`
 - 校验：`SHA256SUMS.txt`
 - 对应源码仓：[`huotian420-cyber/xray-headless-source`](https://github.com/huotian420-cyber/xray-headless-source)
-- 当前对应源码提交：`1945a53` `Add managed SSH port switching`
+- 当前对应源码提交：`253296c` `Fix managed inbound writes and unify ACME issuance`
 - 当前固定版本：`v2026.03.30-headless-direct-2`
 
 ## Tag 规则
