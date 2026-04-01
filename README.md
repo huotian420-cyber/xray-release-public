@@ -18,8 +18,8 @@
 - 包名：`xray-backend-release.tar.gz`
 - 校验：`SHA256SUMS.txt`
 - 对应源码仓：[`huotian420-cyber/xray-headless-source`](https://github.com/huotian420-cyber/xray-headless-source)
-- 当前对应源码提交：`33ebcec` `Fix headless TLS inbound release packaging`
-- 当前固定版本：`v2026.04.01-headless-direct-2`
+- 当前对应源码提交：`7cab790` `Fix headless TLS XHTTP ALPN defaults`
+- 当前固定版本：`v2026.04.01-headless-direct-3`
 
 ## Tag 规则
 
@@ -53,7 +53,7 @@ sudo bash -c 'set -e; apt-get update -y; apt-get install -y curl tar; workdir=$(
 Ubuntu 一键安装固定版本：
 
 ```bash
-sudo bash -c 'set -e; apt-get update -y; apt-get install -y curl tar; workdir=$(mktemp -d); cd "$workdir"; curl -fL --progress-bar -o xray-backend-release.tar.gz https://raw.githubusercontent.com/huotian420-cyber/xray-release-public/v2026.04.01-headless-direct-2/xray-backend-release.tar.gz; tar -xzf xray-backend-release.tar.gz; chmod +x install.sh; ./install.sh'
+sudo bash -c 'set -e; apt-get update -y; apt-get install -y curl tar; workdir=$(mktemp -d); cd "$workdir"; curl -fL --progress-bar -o xray-backend-release.tar.gz https://raw.githubusercontent.com/huotian420-cyber/xray-release-public/v2026.04.01-headless-direct-3/xray-backend-release.tar.gz; tar -xzf xray-backend-release.tar.gz; chmod +x install.sh; ./install.sh'
 ```
 
 最新版本：
@@ -65,7 +65,7 @@ curl -fL --progress-bar -o xray-backend-release.tar.gz https://raw.githubusercon
 固定版本：
 
 ```bash
-curl -fL --progress-bar -o xray-backend-release.tar.gz https://raw.githubusercontent.com/huotian420-cyber/xray-release-public/v2026.04.01-headless-direct-2/xray-backend-release.tar.gz
+curl -fL --progress-bar -o xray-backend-release.tar.gz https://raw.githubusercontent.com/huotian420-cyber/xray-release-public/v2026.04.01-headless-direct-3/xray-backend-release.tar.gz
 ```
 
 校验：
