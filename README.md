@@ -18,8 +18,8 @@
 - 包名：`xray-backend-release.tar.gz`
 - 校验：`SHA256SUMS.txt`
 - 对应源码仓：[`huotian420-cyber/xray-headless-source`](https://github.com/huotian420-cyber/xray-headless-source)
-- 当前对应源码提交：`4bec3f2` `Align headless XHTTP defaults with official guidance`
-- 当前固定版本：`v2026.04.01-headless-direct-5`
+- 当前对应源码提交：`3f44661` `Add headless XHTTP padding and xmux limits`
+- 当前固定版本：`v2026.04.06-headless-direct-1`
 
 ## Tag 规则
 
@@ -41,10 +41,11 @@
 - 安装脚本已对齐官方正式版 `Xray-core v26.3.27`
 - 已移除 SSH 敲门，默认 SSH `22` 保持开放，可在管理菜单里切换到自定义端口
 - `XHTTP` 已按当前官方思路回到最小默认参数：默认不主动写 `host / alpn`
+- 受管 `XHTTP` 导出链接会显式带 `xPaddingBytes` 和官方 `xmux.hMaxRequestTimes` 限制
 
 ## 升级提醒
 
-- 如果你是从 `v2026.04.01-headless-direct-4` 或更早版本升级，并且正在使用 `TLS / Reality + XHTTP`，升级完成后请进入 `xy` 重新执行一次 `创建 / 更新 TLS 节点` 或 `创建 / 更新 Reality 节点`，让数据库里的受管入站和导出链接一起刷新到新版参数。
+- 如果你是从 `v2026.04.01-headless-direct-5` 或更早版本升级，并且正在使用 `TLS / Reality + XHTTP`，升级完成后请进入 `xy` 重新执行一次 `创建 / 更新 TLS 节点` 或 `创建 / 更新 Reality 节点`，让数据库里的受管入站和导出链接一起刷新到新版参数。
 
 ## 下载
 
@@ -57,7 +58,7 @@ sudo bash -c 'set -e; apt-get update -y; apt-get install -y curl tar; workdir=$(
 Ubuntu 一键安装固定版本：
 
 ```bash
-sudo bash -c 'set -e; apt-get update -y; apt-get install -y curl tar; workdir=$(mktemp -d); cd "$workdir"; curl -fL --progress-bar -o xray-backend-release.tar.gz https://raw.githubusercontent.com/huotian420-cyber/xray-release-public/v2026.04.01-headless-direct-5/xray-backend-release.tar.gz; tar -xzf xray-backend-release.tar.gz; chmod +x install.sh; ./install.sh'
+sudo bash -c 'set -e; apt-get update -y; apt-get install -y curl tar; workdir=$(mktemp -d); cd "$workdir"; curl -fL --progress-bar -o xray-backend-release.tar.gz https://raw.githubusercontent.com/huotian420-cyber/xray-release-public/v2026.04.06-headless-direct-1/xray-backend-release.tar.gz; tar -xzf xray-backend-release.tar.gz; chmod +x install.sh; ./install.sh'
 ```
 
 最新版本：
@@ -69,7 +70,7 @@ curl -fL --progress-bar -o xray-backend-release.tar.gz https://raw.githubusercon
 固定版本：
 
 ```bash
-curl -fL --progress-bar -o xray-backend-release.tar.gz https://raw.githubusercontent.com/huotian420-cyber/xray-release-public/v2026.04.01-headless-direct-5/xray-backend-release.tar.gz
+curl -fL --progress-bar -o xray-backend-release.tar.gz https://raw.githubusercontent.com/huotian420-cyber/xray-release-public/v2026.04.06-headless-direct-1/xray-backend-release.tar.gz
 ```
 
 校验：
