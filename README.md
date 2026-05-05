@@ -56,3 +56,9 @@ sha256sum -c SHA256SUMS.txt
 ```bash
 sudo bash -c 'set -e; apt-get update -y; apt-get install -y curl tar; workdir=$(mktemp -d); cd "$workdir"; curl -fL --progress-bar -o xray-backend-release.tar.gz https://raw.githubusercontent.com/huotian420-cyber/xray-release-public/main/xray-backend-release.tar.gz; tar -xzf xray-backend-release.tar.gz; chmod +x install.sh; ./install.sh'
 ```
+
+## 覆盖安装 / 更新
+
+```bash
+sudo bash -c 'set -e; apt-get update -y; apt-get install -y curl tar coreutils; workdir=$(mktemp -d); cd "$workdir"; curl -fL --progress-bar -o xray-backend-release.tar.gz https://raw.githubusercontent.com/huotian420-cyber/xray-release-public/main/xray-backend-release.tar.gz; curl -fL --progress-bar -o SHA256SUMS.txt https://raw.githubusercontent.com/huotian420-cyber/xray-release-public/main/SHA256SUMS.txt; sha256sum -c SHA256SUMS.txt; tar -xzf xray-backend-release.tar.gz; chmod +x install.sh; ./install.sh'
+```

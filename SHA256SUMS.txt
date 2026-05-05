@@ -1,1 +1,1 @@
-ce167e315638da22ca2c9fa827bda76edef687adf1f226b1f662309cf14ec761 *xray-backend-release.tar.gz
+beabf80b58f2ec4194aa34e7365432427d62b773d274fc35b7bef42ff471f83d *xray-backend-release.tar.gz
