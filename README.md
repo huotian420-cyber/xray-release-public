@@ -22,7 +22,9 @@
 - 无前端版本安装包
 - 这里不放源码
 - 对应源码仓是 `xray-headless-source`
-- `Mihomo` 导出当前只给明确兼容的节点，`XHTTP` 节点请改用 `V2Ray` 客户端
+- 已包含无前端订阅服务：加密 `V2Ray` URL、`Mihomo / Clash` YAML、兼容旧订阅路径
+- 新版 `Mihomo / Clash Meta` 兼容内核可读取导出的 `XHTTP xhttp-opts`；旧客户端仍建议用 `V2Ray` 订阅
+- 覆盖安装不会阻断证书读取，服务单元允许读取 `/etc/certs`
 
 ## 什么时候来这里
 
