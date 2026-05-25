@@ -45,6 +45,14 @@ sha256sum -c SHA256SUMS.txt
 sudo bash -c 'set -e; apt-get update -y; apt-get install -y curl tar coreutils; workdir=$(mktemp -d); cd "$workdir"; curl -fL --progress-bar -o xray-backend-release.tar.gz https://raw.githubusercontent.com/huotian420-cyber/xray-release-public/main/xray-backend-release.tar.gz; curl -fL --progress-bar -o SHA256SUMS.txt https://raw.githubusercontent.com/huotian420-cyber/xray-release-public/main/SHA256SUMS.txt; sha256sum -c SHA256SUMS.txt; tar -xzf xray-backend-release.tar.gz; chmod +x install.sh; ./install.sh'
 ```
 
+## 清空旧数据后重装
+
+会删除旧节点、订阅 token、AES key 和流量状态：
+
+```bash
+sudo bash -c 'set -e; apt-get update -y; apt-get install -y curl tar coreutils; workdir=$(mktemp -d); cd "$workdir"; curl -fL --progress-bar -o xray-backend-release.tar.gz https://raw.githubusercontent.com/huotian420-cyber/xray-release-public/main/xray-backend-release.tar.gz; curl -fL --progress-bar -o SHA256SUMS.txt https://raw.githubusercontent.com/huotian420-cyber/xray-release-public/main/SHA256SUMS.txt; sha256sum -c SHA256SUMS.txt; tar -xzf xray-backend-release.tar.gz; chmod +x install.sh; XRAY_BACKEND_PURGE=1 ./install.sh'
+```
+
 ## 从源码仓同步
 
 在 `xray-headless-source` 工作区执行：
