@@ -28,7 +28,6 @@
 - CLI-first，通过 `xy` 管理。
 - 支持加密 V2Ray 订阅 URL 和 Mihomo / Clash YAML。
 - Mihomo YAML 是可直接运行的完整配置，支持新版 Mihomo / Clash Meta 的 XHTTP `xhttp-opts`。
-- 支持哪吒 Agent 官方安装参数导入。
 - 支持 Cloudflare 优选域名订阅导出和每日自动抓取。
 
 ## 下载并校验
